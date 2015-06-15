@@ -125,7 +125,7 @@ html,body {
 
 #missionscreen #entermission {
     position:absolute;
-    top:79px;
+    top:0px;
     left:6px;
     width:246px;
     height:68px;
@@ -141,8 +141,8 @@ html,body {
 
 #missionscreen #exitmission {
     position:absolute;
-    top:79px;
-    left:380px;
+    top:0px;
+    left:650px;
     width:98px;
     height:68px;
     border-width:0px;    
@@ -169,7 +169,7 @@ html,body {
 
 /* Game Interface Screen */
 #gameinterfacescreen {
-    background: url(../images/maininterface.png) no-repeat;
+    background: url(../images/main_interface.png) no-repeat;
 }
 
 #gameinterfacescreen #gamemessages{
@@ -212,7 +212,7 @@ html,body {
 
 #gameinterfacescreen canvas{
     position:absolute;
-    top:79px;
+    top:0px;
     left:0px;
 }
 

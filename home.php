@@ -41,8 +41,8 @@ require("checkvalid.php");
 	            <div id="cash"></div>
 	            <div id="sidebarbuttons">                                
 	            </div>
-	            <canvas id="gamebackgroundcanvas" height="400" width="480"></canvas>
-	            <canvas id="gameforegroundcanvas" height="400" width="480"></canvas>
+	            <canvas id="gamebackgroundcanvas" height="430" width="760"></canvas>
+	            <canvas id="gameforegroundcanvas" height="430" width="760"></canvas>
 	        </div>
 	        <div id="loadingscreen" class="gamelayer">
 	            <div id="loadingmessage"></div>

@@ -5,7 +5,7 @@ var maps = {
             "briefing": "In this level you will learn how to pan across the map.\n\nDon't worry! We will be implementing more features soon.",            
             
             /* Map Details */
-            "mapImage":"images/maps/level-one-debug-grid.png",            
+            "mapImage":"images/maps/level-one.png",
             "startX":4,
             "startY":4,
             

@@ -19,7 +19,7 @@ var mouse = {
         // Player clicked inside the canvas
     },
 
-    draw:function(){
+    draw:function(){//绘制选中框
         if(this.dragSelect){    
             var x = Math.min(this.gameX,this.dragX);
             var y = Math.min(this.gameY,this.dragY);
