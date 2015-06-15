@@ -32,8 +32,7 @@ require("checkvalid.php");
 	        <div id="missionscreen" class="gamelayer">
 	            <input type="button" id="entermission" onclick = "singleplayer.play();">
 	            <input type="button" id="exitmission" onclick = "singleplayer.exit();">
-	            <div id="missonbriefing">Welcome to your first mission.
-	            </div>
+	            <div id="missonbriefing"></div>
 	        </div>
 	        <div id="gameinterfacescreen" class="gamelayer">
 	            <div id="gamemessages"></div>        
@@ -46,7 +45,18 @@ require("checkvalid.php");
 	        </div>
 	        <div id="loadingscreen" class="gamelayer">
 	            <div id="loadingmessage"></div>
-	        </div>            
+	        </div>
+
+            <div id="talkpanel" class="gamelayer">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        带有 title 的面板标题
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    面板内容
+                </div>
+            </div>
 	    </div>
 	    <div style="text-align:center;">
 			<p>copyright © Jason-Zhang@ZJU</p>

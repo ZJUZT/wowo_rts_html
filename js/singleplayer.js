@@ -2,6 +2,7 @@ var singleplayer = {
     // Begin single player campaign
     start:function(){
         // Hide the starting menu layer
+        $('#talkpanel').attr("class","panel panel-default");
         $('.gamelayer').hide();
         
         // Begin with the first level
@@ -10,7 +11,9 @@ var singleplayer = {
         game.team = "blue";
                 
         // Finally start the level
+
         singleplayer.startCurrentLevel();
+
     },    
     exit:function(){
         // Show the starting menu layer
