@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <?php
-session_start(); 
-if(!isset($_SESSION['valid'])|| $_SESSION['valid']!=true){
-	?>
-		<script language="javascript">
-    		window.location= "index.php";
-		</script>
-	<?php
-}
+require("checkvalid.php");
 ?>
 <html>
 	<head>
@@ -19,7 +12,7 @@ if(!isset($_SESSION['valid'])|| $_SESSION['valid']!=true){
 		<script src="js/mouse.js" type="text/javascript" charset="utf-8"></script>		
 		<script src="js/singleplayer.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/maps.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 
 	</head>

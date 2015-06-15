@@ -6,8 +6,73 @@ html,body {
     position: relative;
     width: 900px;
     height: 563px;
-    background: url(images/home_screen.png);
+    background: url(../images/home_screen.png);
     border: 1px solid black;
+}
+.login-box {
+    width: 100%;
+    max-width:500px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+
+    margin-top: -200px;
+    /*设置负值，为要定位子盒子的一半高度*/
+
+}
+@media screen and (min-width:500px){
+    .login-box {
+        left: 50%;
+        /*设置负值，为要定位子盒子的一半宽度*/
+        margin-left: -250px;
+    }
+}
+
+.form {
+    width: 100%;
+    max-width:500px;
+    height: 275px;
+    margin: 25px auto 0px auto;
+    padding-top: 25px;
+}
+.login-content {
+    height: 300px;
+    width: 100%;
+    max-width:500px;
+    background-color: rgba(255, 250, 2550, .6);
+    float: left;
+}
+
+
+.input-group {
+    margin: 0px 0px 30px 0px !important;
+}
+.form-control,
+.input-group {
+    height: 40px;
+}
+
+.form-group {
+    margin-bottom: 0px !important;
+}
+.login-title {
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, .6);
+}
+.login-title h1 {
+    margin-top: 10px !important;
+}
+.login-title small {
+    color: #fff;
+}
+
+.link p {
+    line-height: 20px;
+    margin-top: 30px;
+}
+.btn-sm {
+    padding: 8px 24px !important;
+    font-size: 16px !important;
 }
 
 .gamelayer {
@@ -49,13 +114,13 @@ html,body {
     text-align:center;
     height:48px;
     color:white;
-    background:url(images/loader.gif) no-repeat center;
+    background:url(../images/loader.gif) no-repeat center;
     font:12px Arial;
 }
 
 /* Mission Briefing Screen */
 #missionscreen {
-    background: url(images/main_interface.png) no-repeat;
+    background: url(../images/main_interface.png) no-repeat;
 }
 
 #missionscreen #entermission {
@@ -65,12 +130,12 @@ html,body {
     width:246px;
     height:68px;
     border-width:0px;
-    background-image: url(images/buttons.png);
+    background-image: url(../images/buttons.png);
     background-position: 0px 0px;
 }
 
 #missionscreen #entermission:disabled, #missionscreen #entermission:active {
-    background-image: url(images/buttons.png);
+    background-image: url(../images/buttons.png);
     background-position: -251px 0px;
 }
 
@@ -81,12 +146,12 @@ html,body {
     width:98px;
     height:68px;
     border-width:0px;    
-    background-image: url(images/buttons.png);
+    background-image: url(../images/buttons.png);
     background-position: 0px -76px;
 }
 
 #missionscreen #exitmission:disabled,#missionscreen #exitmission:active{    
-    background-image: url(images/buttons.png);
+    background-image: url(../images/buttons.png);
     background-position: -103px -76px;
 }
 
@@ -104,7 +169,7 @@ html,body {
 
 /* Game Interface Screen */
 #gameinterfacescreen {
-    background: url(images/maininterface.png) no-repeat;
+    background: url(../images/maininterface.png) no-repeat;
 }
 
 #gameinterfacescreen #gamemessages{
