@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - rts@localhost" uuid="728b70cf-db20-4732-85f5-2a76e1bf700b">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>rts.*</schema-pattern>
+      <default-schemas>rts.*</default-schemas>
+    </data-source>
+  </component>
+</project>

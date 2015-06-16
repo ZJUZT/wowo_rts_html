@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - rts@localhost" uuid="728b70cf-db20-4732-85f5-2a76e1bf700b">
+    <database-info product="MySQL" version="5.6.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="rts"/>
+    <table name="battle" schema="" catalog="rts" type="TABLE">
+      <column name="b_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="begin_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="last_time" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="destroy_num" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="user1_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user2_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="winner_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="b_id"/>
+      <foreign-key name="battle_ibfk_1" columns="user1_id" ref-table="user_info" ref-schema="" ref-catalog="rts" ref-columns="u_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="battle_ibfk_2" columns="user2_id" ref-table="user_info" ref-schema="" ref-catalog="rts" ref-columns="u_id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="rank" schema="" catalog="rts" type="TABLE">
+      <column name="u_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="play_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="win_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="u_id"/>
+      <foreign-key name="rank_ibfk_1" columns="u_id" ref-table="user_info" ref-schema="" ref-catalog="rts" ref-columns="u_id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="user_info" schema="" catalog="rts" type="TABLE">
+      <column name="u_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uname" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1"/>
+      <column name="passwd" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="u_id"/>
+      <exported-key name="battle_ibfk_1" table="battle" schema="" catalog="rts" columns="user1_id"/>
+      <exported-key name="battle_ibfk_2" table="battle" schema="" catalog="rts" columns="user2_id"/>
+      <exported-key name="rank_ibfk_1" table="rank" schema="" catalog="rts" columns="u_id"/>
+    </table>
+  </data-source>
+</component>
