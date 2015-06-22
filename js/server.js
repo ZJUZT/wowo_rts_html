@@ -96,6 +96,7 @@ wsServer.on('request',function(request){
 				case "chat":
 					if (player.room && player.room.status=="running"){
 						var cleanedMessage = clientMessage.message.replace(/[<>]/g,"");
+                        //var username =  '<%=Session["username"] %>';
 					   	sendRoomWebSocketMessage(player.room,{type:"chat", from:player.color, message:cleanedMessage});
 						console.log(clientMessage.message,"was cleaned to",cleanedMessage)
 					}

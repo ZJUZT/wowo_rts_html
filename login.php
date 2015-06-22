@@ -27,6 +27,7 @@ if(isset($_POST['login-submit'])){
         $row = mysql_fetch_array($query);
         $_SESSION['u_id'] = $row['u_id'];
         $_SESSION['username'] = $row['uname'];
+        setcookie('username',$_SESSION['username']);   //设置会话cookie，方便JS读取
         //echo $_SESSION['username'];
         header("Location:home.php");
     }

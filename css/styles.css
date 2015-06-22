@@ -184,9 +184,9 @@
 #gameinterfacescreen #gamemessages{
     position:absolute;
     padding-left:10px;
-    top:5px;
+    top:485px;
     left:5px;
-    width:450px;
+    width:750px;
     height:60px;
     color:rgb(130,150,162);
     overflow:hidden;
@@ -429,11 +429,12 @@
 
 #chatmessage{
     position:absolute;
-    top:460px;
-    width:479px;
-    background:rgba(0,255,0,0.1);
+    top:545px;
+    width:730px;
+    height: 17px;
+    background:rgba(255,255,255,0.1);
     color:green;
-    border:1px solid green;
+    border:1px solid white;
     display:none;
 }
 #chatmessage:focus {

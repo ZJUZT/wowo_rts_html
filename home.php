@@ -53,7 +53,7 @@ require('checkvalid.php');
 	        </div>
 	        -->
 			<div id="gameinterfacescreen" class="gamelayer">
-			    <div id="gamemessages"></div>        
+			          
 			    <div id="callerpicture"></div>
 			    <div id="cash"></div>
 			    <div id="sidebarbuttons">                    
@@ -69,11 +69,12 @@ require('checkvalid.php');
 
 			    </div>
 			    <!--Canvas-->
-			    <canvas id="gamebackgroundcanvas" height="430" width="760"></canvas>
-			    <canvas id="gameforegroundcanvas" height="430" width="760"></canvas>
-
+			    <canvas id="gamebackgroundcanvas" height="480" width="760"></canvas>
+			    <canvas id="gameforegroundcanvas" height="480" width="760"></canvas>
+			    <div id="gamemessages"></div>  
 			    <!--chat-->
 			    <input type="text" id="chatmessage"></input>  
+			    
 			</div>
 			
 			<div id="messageboxscreen" class="gamelayer">

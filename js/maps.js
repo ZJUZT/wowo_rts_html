@@ -42,9 +42,9 @@ var maps = {
 	            {"type":"vehicles","name":"scout-tank","x":3,"y":1},    
 	        ],
 	        "spawnLocations":[
-	            { "x":48, "y":36,"startX":36,"startY":20},
-	            { "x":3, "y":36,"startX":0,"startY":20},    
-	            { "x":36, "y":3,"startX":32,"startY":0},
+	            { "x":48, "y":36,"startX":22,"startY":16},
+	            { "x":3, "y":36,"startX":0,"startY":16},    
+	            { "x":36, "y":3,"startX":18,"startY":0},
 	            { "x":3, "y":3,"startX":0,"startY":0},                    
 	        ],
 			/* Conditional and Timed Trigger Events */
