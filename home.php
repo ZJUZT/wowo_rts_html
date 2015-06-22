@@ -39,37 +39,40 @@ require('checkvalid.php');
     <?php  require ('navigation.php'); ?>
 	    <div id="gamecontainer" class = "box">
 	        <div id="gamestartscreen" class="gamelayer">
-	            <span id="singleplayer" onclick = "singleplayer.start();">单人模式</span><br>
-	            <span id="multiplayer" onclick = "multiplayer.start();">两人对战</span><br>
-                <span id="lookuprank" onclick = "lookuprank.start();">查看排名</span><br>
-                <span id="personalinfo" onclick = "personalinfo.start();">个人战绩</span><br>
+	            <!--<span id="singleplayer" onclick = "singleplayer.start();">单人模式</span><br>!-->
+	            <span id="multiplayer" onclick = "multiplayer.start();">开始游戏</span><br>
+                <!--<span id="lookuprank" onclick = "lookuprank.start();">查看排名</span><br>-->
+                <!--<span id="personalinfo" onclick = "personalinfo.start();">个人战绩</span><br>-->
 	        </div>
+	        <!--
 	        <div id="missionscreen" class="gamelayer">
 	            <input type="button" id="entermission" onclick = "singleplayer.play();">
 	            <input type="button" id="exitmission" onclick = "singleplayer.exit();">
 	            <div id="missonbriefing">Welcome to your first mission.
 	            </div>
 	        </div>
+	        -->
 			<div id="gameinterfacescreen" class="gamelayer">
 			    <div id="gamemessages"></div>        
 			    <div id="callerpicture"></div>
 			    <div id="cash"></div>
 			    <div id="sidebarbuttons">                    
-			        <input type="button" id="starportbutton" title = "Starport">                    
+			        <input type="button" id="starportbutton" title = "Starport"> &nbsp;
 			        <input type="button" id="turretbutton" title = "Turret">
-			        <input type="button" id="placeholder1" disabled>
 
-			        <input type="button" id="scouttankbutton" title = "Scout Tank">
+			        <input type="button" id="scouttankbutton" title = "Scout Tank">&nbsp;
 			        <input type="button" id="heavytankbutton" title = "Heavy Tank">
-			        <input type="button" id="harvesterbutton" title = "Harvester">
+			        <input type="button" id="harvesterbutton" title = "Harvester">&nbsp;
 
 			        <input type="button" id="chopperbutton" title = "Copter">
 			        <input type="button" id="wraithbutton" title = "Wraith">
-			        <input type="button" id="placeholder2" disabled>      
 
 			    </div>
+			    <!--Canvas-->
 			    <canvas id="gamebackgroundcanvas" height="430" width="760"></canvas>
 			    <canvas id="gameforegroundcanvas" height="430" width="760"></canvas>
+
+			    <!--chat-->
 			    <input type="text" id="chatmessage"></input>  
 			</div>
 			
@@ -84,7 +87,7 @@ require('checkvalid.php');
 	            <div id="loadingmessage"></div>
 	        </div>
 			<div id="multiplayerlobbyscreen" class="gamelayer">
-			    <select id="multiplayergameslist" size="10">
+			    <select class="form-control" id="multiplayergameslist" size="10">
 			    </select>
 			    <input type="button" id="multiplayerjoin" onclick="multiplayer.join();">
 			    <input type="button" id="multiplayercancel" onclick="multiplayer.cancel();">

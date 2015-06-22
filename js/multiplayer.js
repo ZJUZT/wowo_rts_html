@@ -3,6 +3,7 @@ var multiplayer = {
     websocket_url:"ws://localhost:8080/",
     websocket:undefined,
 	start:function(){
+		$('.gamelayer').hide();
 		game.type = "multiplayer";
 		var WebSocketObject = window.WebSocket || window.MozWebSocket;
 		if (!WebSocketObject){
@@ -14,7 +15,7 @@ var multiplayer = {
 		// Display multiplayer lobby screen after connecting
 		this.websocket.onopen = function(){			
 			// Hide the starting menu layer
-			$('.gamelayer').hide();
+
 			$('#multiplayerlobbyscreen').show();	
 		}
 	
@@ -66,6 +67,8 @@ var multiplayer = {
     updateRoomStatus:function(status){
         var $list = $("#multiplayergameslist");
         $list.empty(); // remove old options
+
+        //依次列出10个房间
         for (var i=0; i < status.length; i++) {
             var key = "Game "+(i+1)+". "+this.statusMessages[status[i]];            
             $list.append($("<option></option>").attr("disabled",status[i]== "running"||status[i]== "starting").attr("value", (i+1)).text(key).addClass(status[i]).attr("selected", (i+1)== multiplayer.roomId));
@@ -78,6 +81,9 @@ var multiplayer = {
 	        document.getElementById('multiplayergameslist').disabled = true;
 	        document.getElementById('multiplayerjoin').disabled = true;        
 	    } else {
+	    	//$('#gamestartscreen').hide();
+	    	//$('.gamelayer').hide();
+	    	//$('#gameinterfacescreen').hide();
 	        game.showMessageBox("Please select a game room to join.");            
 	    }
 	}, 
@@ -113,6 +119,7 @@ var multiplayer = {
 	},
 	currentLevel:0,
 	initMultiplayerLevel:function(messageObject){
+
 	    $('.gamelayer').hide();        
 	    var spawnLocations = messageObject.spawnLocations;
 
@@ -233,10 +240,12 @@ var multiplayer = {
 	},    
 	// Tell the server that the player has lost
 	loseGame:function(){
+		
 	    multiplayer.sendWebSocketMessage({type:"lose_game"});
 	},
 	endGame:function(reason){
-	    game.running = false
+		
+	    game.running = false;
 	    clearInterval(multiplayer.animationInterval);
 	    // Show reason for game ending, and on OK, exit multiplayer screen
 	    game.showMessageBox(reason,multiplayer.closeAndExit);
