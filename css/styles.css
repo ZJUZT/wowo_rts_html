@@ -1,11 +1,19 @@
 
-
 .box{
     margin: 0 auto;
     position: relative;
     width: 900px;
     height: 563px;
     background: url(../images/home_screen.png);
+    border: 1px solid black;
+}
+
+.box_no_background{
+    margin: 0 auto;
+    position: relative;
+    width: 900px;
+    height: 563px;
+    /*background: url(../images/home_screen.png);*/
     border: 1px solid black;
 }
 .login-box {

@@ -32,6 +32,10 @@ require('checkvalid.php');
 		
 		<script src="js/multiplayer.js" type="text/javascript" charset="utf-8"></script>
 
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 		
 		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
@@ -42,7 +46,7 @@ require('checkvalid.php');
 	    <div id="gamecontainer" class = "box">
 	        <div id="gamestartscreen" class="gamelayer">
 	            <!--<span id="singleplayer" onclick = "singleplayer.start();">单人模式</span><br>!-->
-	            <span id="multiplayer" onclick = "multiplayer.start();">开始游戏</span><br>
+	            <span id="multiplayer" onclick = "multiplayer.start();">Start game</span><br>
                 <!--<span id="lookuprank" onclick = "lookuprank.start();">查看排名</span><br>-->
                 <!--<span id="personalinfo" onclick = "personalinfo.start();">个人战绩</span><br>-->
 	        </div>

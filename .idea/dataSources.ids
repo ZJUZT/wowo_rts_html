@@ -23,6 +23,8 @@
       <column name="u_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
       <column name="play_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="win_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="u_name" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <column name="win_rate" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
       <primary-key name="PRIMARY" columns="u_id"/>
       <foreign-key name="rank_ibfk_1" columns="u_id" ref-table="user_info" ref-schema="" ref-catalog="rts" ref-columns="u_id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>

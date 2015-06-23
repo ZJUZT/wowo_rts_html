@@ -11,6 +11,7 @@ if(!isset($_SESSION['u_id'])){
     <script>
         alert("请先登录！");
         location.href = "login.html";
+        exit();
     </script>
     <?php
 }
