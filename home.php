@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <?php
+//session_start();
 require('checkvalid.php');
 ?>
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>Last Colony</title>
+		<title>Conquer</title>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>		
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/game.js" type="text/javascript" charset="utf-8"></script>
@@ -37,6 +38,7 @@ require('checkvalid.php');
 	</head>
 	<body>
     <?php  require ('navigation.php'); ?>
+    
 	    <div id="gamecontainer" class = "box">
 	        <div id="gamestartscreen" class="gamelayer">
 	            <!--<span id="singleplayer" onclick = "singleplayer.start();">单人模式</span><br>!-->
@@ -72,6 +74,7 @@ require('checkvalid.php');
 			    <canvas id="gamebackgroundcanvas" height="480" width="760"></canvas>
 			    <canvas id="gameforegroundcanvas" height="480" width="760"></canvas>
 			    <div id="gamemessages"></div>  
+			    <input id='username' type = "hidden" value = "<?php echo $_SESSION['username']?>">
 			    <!--chat-->
 			    <input type="text" id="chatmessage"></input>  
 			    

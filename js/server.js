@@ -97,7 +97,7 @@ wsServer.on('request',function(request){
 					if (player.room && player.room.status=="running"){
 						var cleanedMessage = clientMessage.message.replace(/[<>]/g,"");
                         //var username =  '<%=Session["username"] %>';
-					   	sendRoomWebSocketMessage(player.room,{type:"chat", from:player.color, message:cleanedMessage});
+					   	sendRoomWebSocketMessage(player.room,{type:"chat", from:player.username, message:cleanedMessage});
 						console.log(clientMessage.message,"was cleaned to",cleanedMessage)
 					}
 					break;                                                                                                                                                                             
@@ -152,12 +152,13 @@ function sendRoomListToEveryone(){
     };
 }
 
-function joinRoom(player,roomId){
+function joinRoom(player,roomId,player_name){
     var room = gameRooms[roomId-1];
     console.log("Adding player to room",roomId);
     // Add the player to the room
     room.players.push(player);
     player.room = room;        
+    player.username = player_name;
     // Update room status 
     if(room.players.length == 1){
         room.status = "waiting";

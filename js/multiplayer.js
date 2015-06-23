@@ -77,7 +77,10 @@ var multiplayer = {
 	join:function(){
 	    var selectedRoom = document.getElementById('multiplayergameslist').value;
 	    if(selectedRoom){            
-	        multiplayer.sendWebSocketMessage({type:"join_room",roomId:selectedRoom});    
+	    	//将用户名传递给websocket
+	        //multiplayer.sendWebSocketMessage({type:"join_room",roomId:selectedRoom});  
+	        var username = $('#username')[0].value;  
+	        multiplayer.sendWebSocketMessage({type:"join_room",roomId:selectedRoom,player_name:username})
 	        document.getElementById('multiplayergameslist').disabled = true;
 	        document.getElementById('multiplayerjoin').disabled = true;        
 	    } else {
