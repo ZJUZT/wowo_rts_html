@@ -59,7 +59,8 @@ wsServer.on('request',function(request){
 	        var clientMessage = JSON.parse(message.utf8Data);
 	        switch (clientMessage.type){
 	            case "join_room":
-	                var room = joinRoom(player,clientMessage.roomId);
+	                var room = joinRoom(player,clientMessage.roomId,clientMessage.player_name);
+					//player.player_name = clientMessage.player_name;
 	                sendRoomListToEveryone();
 	                if(room.players.length == 2){
 	                    initGame(room);
@@ -77,7 +78,7 @@ wsServer.on('request',function(request){
 	                break;     
                 case "latency_pong":
                     finishMeasuringLatency(player,clientMessage);
-                    // Measure latency atleast thrice
+                    // Measure latency at least thrice
                     if(player.latencyTrips.length<3){
                         measureLatency(player);
                     }
@@ -97,7 +98,7 @@ wsServer.on('request',function(request){
 					if (player.room && player.room.status=="running"){
 						var cleanedMessage = clientMessage.message.replace(/[<>]/g,"");
                         //var username =  '<%=Session["username"] %>';
-					   	sendRoomWebSocketMessage(player.room,{type:"chat", from:player.username, message:cleanedMessage});
+					   	sendRoomWebSocketMessage(player.room,{type:"chat", from:player.player_name, message:cleanedMessage});
 						console.log(clientMessage.message,"was cleaned to",cleanedMessage)
 					}
 					break;                                                                                                                                                                             
@@ -158,7 +159,7 @@ function joinRoom(player,roomId,player_name){
     // Add the player to the room
     room.players.push(player);
     player.room = room;        
-    player.username = player_name;
+    player.player_name = player_name;
     // Update room status 
     if(room.players.length == 1){
         room.status = "waiting";
