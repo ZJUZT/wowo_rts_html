@@ -1,8 +1,12 @@
+var battle_period,start_time,loser,opponent;
+
 var multiplayer = {
     // Open multiplayer game lobby
-    websocket_url:"ws://localhost:8080/",
+    //username:$('#username')[0].value,
+    websocket_url:"ws://218.244.137.223:8080/",
     websocket:undefined,
-	start:function(){
+
+start:function(){
 		$('.gamelayer').hide();
 		game.type = "multiplayer";
 		var WebSocketObject = window.WebSocket || window.MozWebSocket;
@@ -51,9 +55,24 @@ var multiplayer = {
 	            multiplayer.commands[messageObject.tick] = messageObject.commands;
 	            break;  
 	        case "end_game":
-	            multiplayer.endGame(messageObject.reason);
-	            break;                
-           case "chat":
+                var username = $('#username')[0].value;
+                battle_period = Math.floor(messageObject.last_time/1000);
+                start_time = Math.floor(messageObject.start_time/1000);
+                var msg;
+                loser = messageObject.loser;
+                opponent = messageObject.opponent;
+                if( loser == username)
+                    msg = "Commander "+username+"\n:You lose this battle!";
+                else
+                    msg = "Commander "+username+"\n:You win this battle!";
+                msg = msg + "\nThis battle lasts "+ (Math.floor(battle_period/60)) +  ' minutes and ' + (battle_period-Math.floor(battle_period/60)*60) + " seconds";
+                multiplayer.endGame(msg);
+
+	            break;
+            case "disconnect":
+                multiplayer.endGame(messageObject.reason);
+                break;
+            case "chat":
 				game.showMessage(messageObject.from,messageObject.message);
 				break;        
         }        
@@ -79,7 +98,7 @@ var multiplayer = {
 	    if(selectedRoom){            
 	    	//将用户名传递给websocket
 	        //multiplayer.sendWebSocketMessage({type:"join_room",roomId:selectedRoom});  
-	        var username = $('#username')[0].value;  
+            var username = $('#username')[0].value;
 	        multiplayer.sendWebSocketMessage({type:"join_room",roomId:selectedRoom,player_name:username})
 	        document.getElementById('multiplayergameslist').disabled = true;
 	        document.getElementById('multiplayerjoin').disabled = true;        
@@ -115,7 +134,9 @@ var multiplayer = {
 		document.getElementById('multiplayerjoin').disabled = false;		
 		// Show the starting menu layer
 		$('.gamelayer').hide();
-	    $('#gamestartscreen').show();			
+	    $('#gamestartscreen').show();
+        if(typeof(loser)!="undefined")
+            window.location.href = "battle.php?loser="+loser+"&opponent="+opponent+"&begin="+start_time+"&last="+battle_period;
 	},
 	sendWebSocketMessage:function(messageObject){
 	    this.websocket.send(JSON.stringify(messageObject));

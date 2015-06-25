@@ -7,6 +7,9 @@ require('checkvalid.php');
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<title>Conquer</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>		
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/game.js" type="text/javascript" charset="utf-8"></script>
@@ -32,13 +35,12 @@ require('checkvalid.php');
 		
 		<script src="js/multiplayer.js" type="text/javascript" charset="utf-8"></script>
 
+        <script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 
-		<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
-		
-		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
+
+
 	</head>
 	<body>
     <?php  require ('navigation.php'); ?>
@@ -83,14 +85,14 @@ require('checkvalid.php');
 			    <input type="text" id="chatmessage"></input>  
 			    
 			</div>
-			
+
 			<div id="messageboxscreen" class="gamelayer">
 	            <div id="messagebox">
 	                <span id="messageboxtext"></span>
 	                <input type="button" id="messageboxok" onclick="game.messageBoxOK();">
 	                <input type="button" id="messageboxcancel" onclick="game.messageBoxCancel();">
 	            </div>
-	        </div>	        
+	        </div>
 	        <div id="loadingscreen" class="gamelayer">
 	            <div id="loadingmessage"></div>
 	        </div>

@@ -1,6 +1,9 @@
 var WebSocketServer = require('websocket').server;
 var http = require('http');
 
+var start_time;
+var end_time;   //游戏开始与结束时间
+
 // Create a simple web server that returns the same response for any request
 var server = http.createServer(function(request,response){
     response.writeHead(200, {'Content-Type': 'text/plain'});
@@ -92,7 +95,7 @@ wsServer.on('request',function(request){
 	                }
 	                break;    
 				case "lose_game":
-					endGame(player.room, "The "+ player.color +" team has been defeated.");                
+					endGame(player.room, player.player_name,player.opponent);
 					break;
 				case "chat":
 					if (player.room && player.room.status=="running"){
@@ -120,8 +123,8 @@ wsServer.on('request',function(request){
 	        var status = player.room.status;
 	        var roomId = player.room.roomId;
 	        // If the game was running, end the game as well            
-	        if(status=="running"){                
-	            endGame(player.room, "The "+ player.color +" player has disconnected.");                
+	        if(status=="running"){
+                disconnectGame(player.room, "Commander "+ player.player_name +" has disconnected.");
 	        } else {
 	            leaveRoom(player,roomId);
 	        }            
@@ -167,6 +170,9 @@ function joinRoom(player,roomId,player_name){
     } else if (room.players.length == 2){
         room.status = "starting";
         player.color = "green";
+        room.players[0].opponent = room.players[1].player_name;
+        room.players[1].opponent = room.players[0].player_name;
+        //标记对手名字
     }
     // Confirm to player that he was added
     var confirmationMessageString = JSON.stringify({type:"joined_room", roomId:roomId, color:player.color});
@@ -215,7 +221,8 @@ function startGame(room){
     sendRoomListToEveryone();
     // Notify players to start the game
     sendRoomWebSocketMessage(room,{type:"start_game"});
-        
+    start_time = Date.now();//游戏开始时间
+
     room.commands = [];    
     room.lastTickConfirmed = {"blue":0,"green":0};
     room.currentTick = 0;
@@ -268,13 +275,25 @@ function finishMeasuringLatency(player,clientMessage){
     player.tickLag = Math.round(player.averageLatency * 2/100)+1;     
     console.log("Measuring Latency for player. Attempt", player.latencyTrips.length, "- Average Latency:",player.averageLatency, "Tick Lag:", player.tickLag);
 }
-function endGame(room,reason){
+function endGame(room,loser,opponent){
     clearInterval(room.interval);
     room.status = "empty";
-    sendRoomWebSocketMessage(room,{type:"end_game",reason:reason})
+    end_time = Date.now();
+    var battle_period = end_time-start_time;
+    sendRoomWebSocketMessage(room,{type:"end_game",loser:loser,opponent:opponent,last_time:battle_period,start_time:start_time});
     for (var i = room.players.length - 1; i >= 0; i--){
         leaveRoom(room.players[i],room.roomId);        
     };     
+    sendRoomListToEveryone();
+}
+
+function disconnectGame(room,reason){
+    clearInterval(room.interval);
+    room.status = "empty";
+    sendRoomWebSocketMessage(room,{type:"disconnect",reason:reason});
+    for (var i = room.players.length - 1; i >= 0; i--){
+        leaveRoom(room.players[i],room.roomId);
+    };
     sendRoomListToEveryone();
 }
 

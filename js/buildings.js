@@ -19,7 +19,7 @@ var buildings = {
                 [1,1]
             ],
             sight:3,
-            hitPoints:500,
+            hitPoints:5,
             cost:5000,
             spriteImages:[
                 {name:"healthy",count:4},
@@ -322,7 +322,7 @@ var buildings = {
 					        this.animationIndex = 0;     
 					        if (this.lifeCode == "healthy"){
 					            // Harvesters mine 2 credits of cash per animation cycle
-					            game.cash[this.team] += 2;
+					            game.cash[this.team] += 10;
 					        }
 					    }
 					    break;					

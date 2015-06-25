@@ -36,8 +36,8 @@ var maps = {
 	        /* Entities for each starting team */
 	        "teamStartingItems":[    
 	            {"type":"buildings","name":"base","x":0,"y":0},
-	            {"type":"vehicles","name":"harvester","x":2,"y":0},    
-	            {"type":"vehicles","name":"heavy-tank","x":2,"y":1},    
+	            {"type":"vehicles","name":"harvester","x":2,"y":0},
+	            {"type":"vehicles","name":"heavy-tank","x":2,"y":1},
 	            {"type":"vehicles","name":"scout-tank","x":3,"y":0},
 	            {"type":"vehicles","name":"scout-tank","x":3,"y":1},    
 	        ],

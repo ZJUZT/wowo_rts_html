@@ -2,7 +2,7 @@
 <!--导航栏-->
 <nav class="navbar navbar-inverse" role="navigation">
    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Hello commander </a>
+      <a class="navbar-brand" href="home.php">Hello commander </a>
    </div>
    <div>
       	<ul class="nav navbar-nav navbar-right">

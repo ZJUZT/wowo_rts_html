@@ -18,6 +18,12 @@ if(isset($_POST['register-submit'])){
 
         $sql = "insert into user_info (uname,passwd) values('$username','$password') ";
         $query = mysql_query($sql);
+        $sql = "select u_id from user_info where uname = '$username' ";
+        $query = mysql_query($sql);
+        $row = mysql_fetch_array($query);
+        $u_id = $row[0];
+        $sql = "insert into rank (u_id,u_name,play_count,win_count,win_rate) values ($u_id,'$username',0,0,0)";
+        $query = mysql_query($sql);
 
         ?>
         <script>
