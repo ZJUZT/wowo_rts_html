@@ -26,7 +26,7 @@ var vehicles = {
             speed:10,
             sight:3,
             cost:1600,
-            hitPoints:5,
+            hitPoints:50,
             turnSpeed:2,
             spriteImages:[
                 {name:"stand",count:1,directions:8}            
@@ -46,7 +46,7 @@ var vehicles = {
             speed:20,
             sight:4,
             cost:500,
-            hitPoints:5,
+            hitPoints:50,
             turnSpeed:4,
             spriteImages:[
                 {name:"stand",count:1,directions:8}            
@@ -66,7 +66,7 @@ var vehicles = {
             speed:15,
             sight:5,
             cost:1200,
-            hitPoints:5,
+            hitPoints:50,
             turnSpeed:4,
             spriteImages:[
                 {name:"stand",count:1,directions:8}            

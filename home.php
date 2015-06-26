@@ -65,15 +65,15 @@ require('checkvalid.php');
 			    <div id="callerpicture"></div>
 			    <div id="cash"></div>
 			    <div id="sidebarbuttons">                    
-			        <input type="button" id="starportbutton" title = "Starport"> &nbsp;
-			        <input type="button" id="turretbutton" title = "Turret">
+			        <input type="button" id="starportbutton" title = "Starport(2000)"> &nbsp;
+			        <input type="button" id="turretbutton" title = "Turret(1500)">
 
-			        <input type="button" id="scouttankbutton" title = "Scout Tank">&nbsp;
-			        <input type="button" id="heavytankbutton" title = "Heavy Tank">
-			        <input type="button" id="harvesterbutton" title = "Harvester">&nbsp;
+			        <input type="button" id="scouttankbutton" title = "Scout Tank(500)">&nbsp;
+			        <input type="button" id="heavytankbutton" title = "Heavy Tank(1200)">
+			        <input type="button" id="harvesterbutton" title = "Harvester(1600)">&nbsp;
 
-			        <input type="button" id="chopperbutton" title = "Copter">
-			        <input type="button" id="wraithbutton" title = "Wraith">
+			        <input type="button" id="chopperbutton" title = "Copter(900)">
+			        <input type="button" id="wraithbutton" title = "Wraith(600)">
 
 			    </div>
 			    <!--Canvas-->

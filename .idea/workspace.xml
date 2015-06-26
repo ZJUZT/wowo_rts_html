@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1999a7c0-0b96-4e39-a5c0-4efeb71e8af0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/battle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/history.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL/rts_v2.sql" />
-      <change type="DELETED" beforePath="E:\Github\wowo_rts_html\images\maininterface.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Github\wowo_rts_html\images\splashscreen.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="DELETED" beforePath="E:\Github\wowo_rts_html\images\maps\level-one-debug-grid.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\Github\wowo_rts_html\images\maps\level-one.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\Github\wowo_rts_html\test.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buildings.js" afterPath="$PROJECT_DIR$/js/buildings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/common.js" afterPath="$PROJECT_DIR$/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/maps.js" afterPath="$PROJECT_DIR$/js/maps.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/multiplayer.js" afterPath="$PROJECT_DIR$/js/multiplayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/navigation.php" afterPath="$PROJECT_DIR$/navigation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rank.php" afterPath="$PROJECT_DIR$/rank.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.html" afterPath="$PROJECT_DIR$/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/server.js" afterPath="$PROJECT_DIR$/js/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vehicles.js" afterPath="$PROJECT_DIR$/js/vehicles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -109,45 +98,48 @@
       <file leaf-file-name="multiplayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/multiplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="7850">
-              <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="8325">
+              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySQL - rts@localhost" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/">
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.866667" vertical-offset="409" max-vertical-offset="975">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-              <folding>
-                <marker date="0" expanded="true" signature="1125:1215" placeholder="update rank ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rts.rank" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/rts..rank">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="350">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5925">
+              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buildings.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="buildings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/buildings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7886" max-vertical-offset="9650">
-              <caret line="324" column="58" selection-start-line="324" selection-start-column="58" selection-end-line="324" selection-end-column="58" />
+            <state vertical-scroll-proportion="2.6094277" vertical-offset="0" max-vertical-offset="9650">
+              <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/game.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1875" max-vertical-offset="11800">
+              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vehicles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/vehicles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4425" max-vertical-offset="12200">
+              <caret line="190" column="34" selection-start-line="190" selection-start-column="34" selection-end-line="190" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -156,18 +148,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5762712" vertical-offset="6766" max-vertical-offset="7625">
-              <caret line="272" column="6" selection-start-line="272" selection-start-column="6" selection-end-line="272" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-53.67647" vertical-offset="300" max-vertical-offset="2500">
-              <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+            <state vertical-scroll-proportion="-240.83333" vertical-offset="0" max-vertical-offset="7625">
+              <caret line="289" column="37" selection-start-line="289" selection-start-column="37" selection-end-line="289" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -176,7 +158,7 @@
       <file leaf-file-name="battle.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/battle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.515625" vertical-offset="525" max-vertical-offset="1500">
+            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1500">
               <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="true" />
@@ -193,20 +175,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/navigation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.764706" vertical-offset="0" max-vertical-offset="750">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="rank.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rank.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6764705" vertical-offset="450" max-vertical-offset="2575">
+            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2575">
               <caret line="23" column="101" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="101" />
               <folding>
                 <marker date="1435112214698" expanded="true" signature="766:855" placeholder="select count..rank..." />
@@ -218,11 +190,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="history.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/history.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3472222" vertical-offset="1525" max-vertical-offset="2725">
-              <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1869" max-vertical-offset="2725">
+              <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
               <folding>
                 <marker date="1435204563206" expanded="true" signature="770:802" placeholder="select * fro..rank..." />
                 <marker date="1435204563206" expanded="true" signature="770:807" placeholder="select * fro..rank..." />
@@ -232,13 +204,19 @@
                 <marker date="1435204563206" expanded="true" signature="1709:1790" placeholder="select count..rank..." />
                 <marker date="1435204563206" expanded="true" signature="1709:1792" placeholder="select count..battle..." />
                 <marker date="1435204563206" expanded="true" signature="2102:2217" placeholder="select * fro..rank..." />
-                <marker date="1435204563206" expanded="true" signature="3224:3281" placeholder="..." />
-                <marker date="1435204563206" expanded="true" signature="3256:3270" placeholder="..." />
                 <marker date="1435204563206" expanded="true" signature="3294:3306" placeholder="..." />
-                <marker date="1435204563206" expanded="true" signature="3294:3594" placeholder="..." />
                 <marker date="1435204563206" expanded="true" signature="3336:3361" placeholder="{...}" />
-                <marker date="1435204563206" expanded="true" signature="3455:3569" placeholder="//..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/maps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="35.366665" vertical-offset="1661" max-vertical-offset="2225">
+              <caret line="24" column="1112" selection-start-line="24" selection-start-column="1112" selection-end-line="24" selection-end-column="1112" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -265,8 +243,6 @@
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/navigation.php" />
         <option value="$PROJECT_DIR$/js/common.js" />
-        <option value="$PROJECT_DIR$/js/maps.js" />
-        <option value="$PROJECT_DIR$/js/vehicles.js" />
         <option value="$PROJECT_DIR$/register.html" />
         <option value="$PROJECT_DIR$/register.php" />
         <option value="dbtable:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/rts..battle" />
@@ -274,13 +250,15 @@
         <option value="dbtable:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/rts..user_info" />
         <option value="$PROJECT_DIR$/SQL/rts_v2.sql" />
         <option value="$PROJECT_DIR$/connect.php" />
-        <option value="$PROJECT_DIR$/js/buildings.js" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="db-console:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/" />
-        <option value="$PROJECT_DIR$/js/server.js" />
-        <option value="$PROJECT_DIR$/js/multiplayer.js" />
         <option value="$PROJECT_DIR$/battle.php" />
         <option value="$PROJECT_DIR$/history.php" />
+        <option value="$PROJECT_DIR$/js/maps.js" />
+        <option value="$PROJECT_DIR$/js/server.js" />
+        <option value="$PROJECT_DIR$/js/multiplayer.js" />
+        <option value="$PROJECT_DIR$/js/vehicles.js" />
+        <option value="$PROJECT_DIR$/js/buildings.js" />
       </list>
     </option>
   </component>
@@ -293,7 +271,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -318,6 +296,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -346,73 +325,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SQL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aircraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wowo_rts_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -524,14 +442,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14201184" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.063609466" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3883648" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21815519" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -539,6 +456,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14201184" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -683,11 +601,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/maps/level-one.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mouse.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="5632">
@@ -749,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7050">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,23 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2575">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="574" max-vertical-offset="1900">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vehicles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="12200">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1838" max-vertical-offset="2725">
           <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -794,12 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1300">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <marker date="1435163765421" expanded="true" signature="-1:-1" placeholder="select * fro..user_info..." />
-            <marker date="1435163765421" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1435163765421" expanded="true" signature="-1:-1" placeholder="select u_id ..user_info..." />
-            <marker date="1435163765421" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,12 +703,13 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="255.0" y="228.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="255.0" y="229.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -828,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1250">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,23 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="350">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-169.3" vertical-offset="596" max-vertical-offset="5925">
-          <caret line="227" column="4" selection-start-line="227" selection-start-column="3" selection-end-line="227" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="28.333334" vertical-offset="9375" max-vertical-offset="11800">
-          <caret line="341" column="6" selection-start-line="341" selection-start-column="6" selection-end-line="341" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,15 +736,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/rts..battle">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="700">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="36" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -881,83 +751,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.32353" vertical-offset="0" max-vertical-offset="1000">
           <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <marker date="1435199983810" expanded="true" signature="-1:-1" placeholder="select * fro..user_info..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/rts..user_info">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="300">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="54" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://db-console:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.866667" vertical-offset="409" max-vertical-offset="975">
+        <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="975">
           <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding>
-            <marker date="0" expanded="true" signature="1125:1215" placeholder="update rank ..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7a9e8136/728b70cf-db20-4732-85f5-2a76e1bf700b/rts..rank">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="350">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-53.67647" vertical-offset="300" max-vertical-offset="2500">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2500">
           <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5762712" vertical-offset="6766" max-vertical-offset="7625">
-          <caret line="272" column="6" selection-start-line="272" selection-start-column="6" selection-end-line="272" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/buildings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7886" max-vertical-offset="9650">
-          <caret line="324" column="58" selection-start-line="324" selection-start-column="58" selection-end-line="324" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/multiplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="7850">
-          <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/navigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.764706" vertical-offset="0" max-vertical-offset="750">
+        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="750">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding />
         </state>
@@ -965,7 +803,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/battle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.515625" vertical-offset="525" max-vertical-offset="1500">
+        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1500">
           <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="true" />
@@ -983,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rank.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6764705" vertical-offset="450" max-vertical-offset="2575">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2575">
           <caret line="23" column="101" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="101" />
           <folding>
             <marker date="1435112214698" expanded="true" signature="766:855" placeholder="select count..rank..." />
@@ -996,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/history.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3472222" vertical-offset="1525" max-vertical-offset="2725">
-          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1869" max-vertical-offset="2725">
+          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
           <folding>
             <marker date="1435204563206" expanded="true" signature="770:802" placeholder="select * fro..rank..." />
             <marker date="1435204563206" expanded="true" signature="770:807" placeholder="select * fro..rank..." />
@@ -1007,13 +845,65 @@
             <marker date="1435204563206" expanded="true" signature="1709:1790" placeholder="select count..rank..." />
             <marker date="1435204563206" expanded="true" signature="1709:1792" placeholder="select count..battle..." />
             <marker date="1435204563206" expanded="true" signature="2102:2217" placeholder="select * fro..rank..." />
-            <marker date="1435204563206" expanded="true" signature="3224:3281" placeholder="..." />
-            <marker date="1435204563206" expanded="true" signature="3256:3270" placeholder="..." />
             <marker date="1435204563206" expanded="true" signature="3294:3306" placeholder="..." />
-            <marker date="1435204563206" expanded="true" signature="3294:3594" placeholder="..." />
             <marker date="1435204563206" expanded="true" signature="3336:3361" placeholder="{...}" />
-            <marker date="1435204563206" expanded="true" signature="3455:3569" placeholder="//..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5925">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/multiplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="8325">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-240.83333" vertical-offset="0" max-vertical-offset="7625">
+          <caret line="289" column="37" selection-start-line="289" selection-start-column="37" selection-end-line="289" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="35.366665" vertical-offset="1661" max-vertical-offset="2225">
+          <caret line="24" column="1112" selection-start-line="24" selection-start-column="1112" selection-end-line="24" selection-end-column="1112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="11800">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vehicles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4425" max-vertical-offset="12200">
+          <caret line="190" column="34" selection-start-line="190" selection-start-column="34" selection-end-line="190" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/buildings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.6094277" vertical-offset="0" max-vertical-offset="9650">
+          <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

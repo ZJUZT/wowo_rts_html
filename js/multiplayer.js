@@ -1,5 +1,6 @@
 var battle_period,start_time,loser,opponent;
 
+var map_id;
 var multiplayer = {
     // Open multiplayer game lobby
     //username:$('#username')[0].value,
@@ -159,7 +160,10 @@ start:function(){
 	    var level = maps.multiplayer[multiplayer.currentLevel];
 
 	    // Load all the assets for the level
-	    game.currentMapImage = loader.loadImage(level.mapImage);
+        map_id = messageObject.map_id;
+        console.log(level.mapImage[map_id]);
+	    game.currentMapImage = loader.loadImage(level.mapImage[map_id]);
+
 	    game.currentLevel = level;
 
 	    // Setup offset based on spawn location sent by server
@@ -210,8 +214,23 @@ start:function(){
 	            game.currentMapTerrainGrid[y][x] = 0;
 	        }
 	    };
-	    for (var i = level.mapObstructedTerrain.length - 1; i >= 0; i--){            
-	        var obstruction = level.mapObstructedTerrain[i];
+        var mapObstructedTerrain;
+        switch (map_id){
+            case 0:
+                mapObstructedTerrain = level.mapObstructedTerrain0;
+                break;
+            case 1:
+                mapObstructedTerrain = level.mapObstructedTerrain1;
+                break;
+            case 2:
+                mapObstructedTerrain = level.mapObstructedTerrain2;
+                break;
+            case 3:
+                mapObstructedTerrain = level.mapObstructedTerrain3;
+                break;
+        }
+	    for (var i = mapObstructedTerrain.length - 1; i >= 0; i--){
+	        var obstruction = mapObstructedTerrain[i];
 	        game.currentMapTerrainGrid[obstruction[1]][obstruction[0]] = 1;
 	    };
 	    game.currentMapPassableGrid = undefined;

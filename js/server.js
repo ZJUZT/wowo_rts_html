@@ -211,8 +211,8 @@ function initGame(room){
     // Randomly select two spawn locations between 0 and 3 for both players. 
     var spawns = [0,1,2,3];
     var spawnLocations = {"blue":spawns.splice(Math.floor(Math.random()*spawns.length),1), "green":spawns.splice(Math.floor(Math.random()*spawns.length),1)};
-    
-    sendRoomWebSocketMessage(room,{type:"init_level", spawnLocations:spawnLocations, level:currentLevel});
+    var map_id = Math.floor(Math.random()*4);
+    sendRoomWebSocketMessage(room,{type:"init_level", spawnLocations:spawnLocations, level:currentLevel,map_id:map_id});
 }
 
 function startGame(room){

@@ -19,7 +19,7 @@ var buildings = {
                 [1,1]
             ],
             sight:3,
-            hitPoints:5,
+            hitPoints:50,
             cost:5000,
             spriteImages:[
                 {name:"healthy",count:4},
