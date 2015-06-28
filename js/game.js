@@ -340,38 +340,8 @@ var game = {
 	        }                            
 	    };        
 	},
-	// Functions for communicating with player
-	characters: {
-	    "system":{
-	        "name":"System",
-	        "image":"images/characters/system.png"
-	    },
-	    "op":{
-	        "name":"Operator",
-	        "image":"images/characters/girl1.png"
-	    },
-	    "pilot":{
-	        "name":"Pilot",
-	        "image":"images/characters/girl2.png"
-	    },
-	    "driver":{
-	        "name":"Driver",
-	        "image":"images/characters/man1.png"
-	    }            
-	},
 	showMessage:function(from,message){
 		sounds.play('message-received');
-	    var character = game.characters[from];        
-	    if (character){
-	        from = character.name;
-	        if (character.image){
-	            $('#callerpicture').html('<img src="'+character.image+'"/>');
-	            // hide the profile picture after six seconds
-	            setTimeout(function(){
-	                $('#callerpicture').html("");
-	            },6000)    
-	        }
-	    }
 	    // Append message to messages pane and scroll to the bottom
 	    var existingMessage = $('#gamemessages').html();
 	    //from = $('#username').value;

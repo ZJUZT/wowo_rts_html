@@ -1,10 +1,10 @@
 var battle_period,start_time,loser,opponent;
-
 var map_id;
+
 var multiplayer = {
     // Open multiplayer game lobby
     //username:$('#username')[0].value,
-    websocket_url:"ws://218.244.137.223:8080/",
+    websocket_url:"ws://218.244.137.223:8081/",
     websocket:undefined,
 
 start:function(){
@@ -16,12 +16,9 @@ start:function(){
 			return;
 		}
 		this.websocket = new WebSocketObject(this.websocket_url);
-		this.websocket.onmessage = multiplayer.handleWebSocketMessage;
-		// Display multiplayer lobby screen after connecting
-		this.websocket.onopen = function(){			
-			// Hide the starting menu layer
-
-			$('#multiplayerlobbyscreen').show();	
+		this.websocket.onmessage = multiplayer.handleMsgfromServer;
+		this.websocket.onopen = function(){
+			$('#roomscreen').show();	 //显示房间背景图片
 		}
 	
 		this.websocket.onclose = function(){			
@@ -32,18 +29,18 @@ start:function(){
 			multiplayer.endGame("Error connecting to server.");
 		}
 	},
-    handleWebSocketMessage:function(message){
+    handleMsgfromServer:function(message){
         var messageObject = JSON.parse(message.data);
         switch (messageObject.type){
+            case "init_level":
+                multiplayer.initMultiplayerLevel(messageObject);
+                break;
             case "room_list":
                 multiplayer.updateRoomStatus(messageObject.status);
                 break;    
 	        case "joined_room":
 	            multiplayer.roomId = messageObject.roomId;
 	            multiplayer.color = messageObject.color;
-	            break;
-	        case "init_level":
-	            multiplayer.initMultiplayerLevel(messageObject);
 	            break;
 	        case "start_game":
 	            multiplayer.startGame();
@@ -57,8 +54,10 @@ start:function(){
 	            break;  
 	        case "end_game":
                 var username = $('#username')[0].value;
-                battle_period = Math.floor(messageObject.last_time/1000);
-                start_time = Math.floor(messageObject.start_time/1000);
+                //battle_period = Math.floor(messageObject.last_time/1000);
+                //start_time = Math.floor(messageObject.start_time/1000);
+                battle_period = messageObject.last_time;
+                start_time = messageObject.start_time;
                 var msg;
                 loser = messageObject.loser;
                 opponent = messageObject.opponent;
@@ -79,10 +78,10 @@ start:function(){
         }        
     },
     statusMessages:{
-        'starting':'Game Starting',
-        'running':'Game in Progress',
-        'waiting':'Awaiting second player',
-        'empty':'Open'
+        'starting':'游戏开始',
+        'running':'游戏中',
+        'waiting':'等待第二个玩家进入房间',
+        'empty':'房间开放'
     },
     updateRoomStatus:function(status){
         var $list = $("#multiplayergameslist");
@@ -136,8 +135,11 @@ start:function(){
 		// Show the starting menu layer
 		$('.gamelayer').hide();
 	    $('#gamestartscreen').show();
-        if(typeof(loser)!="undefined")
-            window.location.href = "battle.php?loser="+loser+"&opponent="+opponent+"&begin="+start_time+"&last="+battle_period;
+        $('#money_collected').html(0);
+        $('#destroyed_num').html(0);
+        $('#gamemessages').html("");
+        //if(typeof(loser)!="undefined")
+        //    window.location.href = "battle.php?loser="+loser+"&opponent="+opponent+"&begin="+start_time+"&last="+battle_period;
 	},
 	sendWebSocketMessage:function(messageObject){
 	    this.websocket.send(JSON.stringify(messageObject));
@@ -237,7 +239,8 @@ start:function(){
 
 	    // Load Starting Cash For Game
 	    game.cash = $.extend([],level.cash);
-
+        game.money_collected = $.extend([],level.money_collected);
+        game.destroyed_num = $.extend([],level.destroyed_num);
 	    // Enable the enter mission button once all assets are loaded
 	    if (loader.loaded){
 	        multiplayer.sendWebSocketMessage({type:"initialized_level"});
@@ -281,16 +284,24 @@ start:function(){
 	        multiplayer.sentCommandForTick = false;
 	    }
 	},    
-	// Tell the server that the player has lost
+	//游戏失败
 	loseGame:function(){
 		
 	    multiplayer.sendWebSocketMessage({type:"lose_game"});
 	},
+
+    updateMoneyCollect:function(){
+      multiplayer.sendWebSocketMessage({type:"updateMoneyCollect",roomId:multiplayer.roomId});
+    },
+
+    updateDestroyed:function(){
+      multiplayer.sendWebSocketMessage(({type:"updateDestroyed",roomId:multiplayer.roomId}));
+    },
+
 	endGame:function(reason){
 		
 	    game.running = false;
 	    clearInterval(multiplayer.animationInterval);
-	    // Show reason for game ending, and on OK, exit multiplayer screen
 	    game.showMessageBox(reason,multiplayer.closeAndExit);
 	}
 };
@@ -300,8 +311,7 @@ $(window).keydown(function(e){
     if(game.type != "multiplayer" || !game.running){
         return;
     }
-    
-    var keyPressed = e.which;
+
     if (e.which == 13){ // Enter key pressed    
         var isVisible = $('#chatmessage').is(':visible');    
         if (isVisible){
@@ -318,7 +328,6 @@ $(window).keydown(function(e){
         }
         e.preventDefault();
     } else if (e.which==27){ // Escape key pressed
-        // Pressing escape hides the chat box
         $('#chatmessage').hide();
         $('#chatmessage').val('');        
         e.preventDefault();

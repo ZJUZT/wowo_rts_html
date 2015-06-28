@@ -1,23 +1,15 @@
 var mouse = {
-    // x,y coordinates of mouse relative to top left corner of canvas
     x:0,
     y:0,
-    // x,y coordinates of mouse relative to top left corner of game map
     gameX:0,
     gameY:0,
-    // game grid x,y coordinates of mouse 
     gridX:0,
     gridY:0,
-    // whether or not the left mouse button is currently pressed
     buttonPressed:false,
-    // whether or not the player is dragging and selecting with the left mouse button pressed
     dragSelect:false,
-    // whether or not the mouse is inside the canvas region
     insideCanvas:false,
 
 	click:function(ev,rightClick){
-	    // Player clicked inside the canvas
-
 	    var clickedItem = this.itemUnderMouse();
 	    var shiftPressed = ev.shiftKey;
 

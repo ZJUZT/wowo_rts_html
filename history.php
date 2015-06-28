@@ -39,6 +39,8 @@ $user_lose = $row['play_count'] - $row['win_count'];
                 <th>开始时间</th>
                 <th>持续时间</th>
                 <th>对手</th>
+                <th>收集资源数</th>
+                <th>摧毁敌人单位数</th>
                 <th>战役结果</th>
             </tr>
             </thead>
@@ -68,11 +70,17 @@ $user_lose = $row['play_count'] - $row['win_count'];
                 else
                     echo "<tr>";
                 echo "<td>".(date("Y-m-d H:i:s",$row['begin_time']))."</td>";
-                echo "<td>".(floor($row['last_time']/60))." minutes".($row['last_time']-floor($row['last_time']/60)*60)." seconds"."</td>";
-                if($row['user1_name']!=$u_name)
+                echo "<td>".(floor($row['last_time']/60))." minutes ".($row['last_time']-floor($row['last_time']/60)*60)." seconds"."</td>";
+                if($row['user1_name']!=$u_name){
                     echo "<td>".$row['user1_name']."</td>";
-                else
+                    echo "<td>".$row['user2_money']."</td>";
+                    echo "<td>".$row['user2_destroy']."</td>";
+                }
+                else{
                     echo "<td>".$row['user2_name']."</td>";
+                    echo "<td>".$row['user1_money']."</td>";
+                    echo "<td>".$row['user1_destroy']."</td>";
+                }
                 if($row['winner_name']==$u_name)
                     echo "<td>"."Win"."</td>";
                 else

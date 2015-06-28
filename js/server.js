@@ -1,4 +1,12 @@
 var WebSocketServer = require('websocket').server;
+var mysql  = require('mysql');  //调用MySQL模块
+var mysql_conn = mysql.createConnection({
+    host     : 'localhost',       //主机
+    user     : 'root',               //MySQL认证用户名
+    password  : '19940812zc',
+    port: '3306',                   //端口号
+    database: 'rts'
+});
 var http = require('http');
 
 var start_time;
@@ -10,8 +18,8 @@ var server = http.createServer(function(request,response){
     response.end("This is the node.js HTTP server.");
 });
 
-server.listen(8080,function(){
-    console.log('Server has started listening on port 8080');
+server.listen(8081,function(){
+    console.log('Server has started listening on port 8081');
 });
 
 var wsServer = new WebSocketServer({
@@ -19,19 +27,21 @@ var wsServer = new WebSocketServer({
     autoAcceptConnections: false        
 });
 
-// Logic to determine whether a specified connection is allowed.
+
 function connectionIsAllowed(request){
-    // Check criteria such as request.origin, request.remoteAddress 
     return true;
 }
 
-// Initialize a set of rooms
+// 初始化房间
 var gameRooms = [];
+
+var players = [];  //每个房间允许两个玩家进入
+
 for (var i=0; i < 10; i++) {
     gameRooms.push({status:"empty",players:[],roomId:i+1});
 };
 
-var players = [];
+
 wsServer.on('request',function(request){
     if(!connectionIsAllowed(request)){
         request.reject();
@@ -46,9 +56,9 @@ wsServer.on('request',function(request){
     var player = {
         connection:connection,
         latencyTrips:[]    
-    }
+    };
 
-    players.push(player);
+    players.push(player);   //将该玩家加入到房间中
     
     // Measure latency for player
     measureLatency(player);
@@ -78,7 +88,29 @@ wsServer.on('request',function(request){
 	                if (player.room.playersReady==2){
 	                    startGame(player.room);
 	                }
-	                break;     
+	                break;
+                case "updateMoneyCollect":
+                    //player.money_collected += 5;
+                    var room_id = clientMessage.roomId;
+                    if(gameRooms[room_id-1].players[0].player_name==player.player_name){
+                        gameRooms[room_id-1].players[0].money_collected+=5;
+                    }
+                    else{
+                        gameRooms[room_id-1].players[1].money_collected+=5;
+                    }
+                    console.log('updateMoneyCollect ' + player.player_name);
+                    break;
+                case "updateDestroyed":
+                    //player.destroyed_num += 1;
+                    room_id = clientMessage.roomId;
+                    if(gameRooms[room_id-1].players[0].player_name==player.player_name){
+                        gameRooms[room_id-1].players[0].destroyed_num+=1;
+                    }
+                    else{
+                        gameRooms[room_id-1].players[1].destroyed_num+=1;
+                    }
+                    console.log('updateDestroyed ' + player.player_name);
+                    break;
                 case "latency_pong":
                     finishMeasuringLatency(player,clientMessage);
                     // Measure latency at least thrice
@@ -161,7 +193,7 @@ function joinRoom(player,roomId,player_name){
     console.log("Adding player to room",roomId);
     // Add the player to the room
     room.players.push(player);
-    player.room = room;        
+    player.room = room;
     player.player_name = player_name;
     // Update room status 
     if(room.players.length == 1){
@@ -172,6 +204,8 @@ function joinRoom(player,roomId,player_name){
         player.color = "green";
         room.players[0].opponent = room.players[1].player_name;
         room.players[1].opponent = room.players[0].player_name;
+        room.players[0].money_collected = room.players[1].money_collected=0;
+        room.players[0].destroyed_num = room.players[1].destroyed_num=0;
         //标记对手名字
     }
     // Confirm to player that he was added
@@ -209,9 +243,9 @@ function initGame(room){
     var currentLevel = 0;
     
     // Randomly select two spawn locations between 0 and 3 for both players. 
-    var spawns = [0,1,2,3];
+    var spawns = [0,1,2];
     var spawnLocations = {"blue":spawns.splice(Math.floor(Math.random()*spawns.length),1), "green":spawns.splice(Math.floor(Math.random()*spawns.length),1)};
-    var map_id = Math.floor(Math.random()*4);
+    var map_id = Math.floor(Math.random()*1);
     sendRoomWebSocketMessage(room,{type:"init_level", spawnLocations:spawnLocations, level:currentLevel,map_id:map_id});
 }
 
@@ -263,6 +297,7 @@ function measureLatency(player){
     var clientMessage = {type:"latency_ping"};
     connection.send(JSON.stringify(clientMessage));
 }
+
 function finishMeasuringLatency(player,clientMessage){
     var measurement = player.latencyTrips[player.latencyTrips.length-1];
     measurement.end = Date.now();
@@ -280,6 +315,72 @@ function endGame(room,loser,opponent){
     room.status = "empty";
     end_time = Date.now();
     var battle_period = end_time-start_time;
+    var winner_name;
+    if(room.players[0].player_name==loser){
+        winner_name = room.players[1].player_name;
+    }
+    else{
+        winner_name = room.players[0].player_name;
+    }
+    mysql_conn.connect(function(err){
+        if(err){
+            console.log('[query] - :'+err);
+            return;
+        }
+        console.log('[connection connect]  succeed!');
+    });
+    start_time = Math.floor(start_time/1000);
+    battle_period = Math.floor(battle_period/1000);
+    var sql = "insert into battle(begin_time,last_time,user1_name,user2_name,user1_money,user2_money,user1_destroy,user2_destroy,winner_name) VALUES (?,?,?,?,?,?,?,?,?)";
+    var para = [
+        start_time,
+        battle_period,
+        room.players[0].player_name,
+        room.players[1].player_name,
+        room.players[0].money_collected,
+        room.players[1].money_collected,
+        room.players[1].destroyed_num,
+        room.players[0].destroyed_num,
+        winner_name];
+    mysql_conn.query(sql,para,function (err, result) {
+        if(err){
+            console.log('[INSERT ERROR] - ',err.message);
+            return;
+        }
+        console.log('--------------------------INSERT----------------------------');
+        //console.log('INSERT ID:',result.insertId);
+        console.log('INSERT ID:',result);
+        console.log('-----------------------------------------------------------------');
+    });
+
+    //update loser's rank
+    sql = "update rank set play_count = play_count + 1,win_rate = win_count/play_count where u_name = ?";
+    para = [loser];
+    mysql_conn.query(sql,para,function (err, result) {
+        if(err){
+            console.log('[INSERT ERROR] - ',err.message);
+            return;
+        }
+        console.log('--------------------------UPDATE----------------------------');
+        //console.log('INSERT ID:',result.insertId);
+        console.log('UPDATE ID:',result);
+        console.log('-----------------------------------------------------------------');
+    });
+
+    //update winner's rank
+    sql = "update rank set play_count = play_count + 1,win_count=win_count+1,win_rate = win_count/play_count where u_name = ?";
+    para = [winner_name];
+    mysql_conn.query(sql,para,function (err, result) {
+        if(err){
+            console.log('[INSERT ERROR] - ',err.message);
+            return;
+        }
+        console.log('--------------------------UPDATE----------------------------');
+        //console.log('INSERT ID:',result.insertId);
+        console.log('UPDATE ID:',result);
+        console.log('-----------------------------------------------------------------');
+    });
+
     sendRoomWebSocketMessage(room,{type:"end_game",loser:loser,opponent:opponent,last_time:battle_period,start_time:start_time});
     for (var i = room.players.length - 1; i >= 0; i--){
         leaveRoom(room.players[i],room.roomId);        

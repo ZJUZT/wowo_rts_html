@@ -1,11 +1,11 @@
 
 .box{
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     position: relative;
     width: 900px;
     height: 563px;
     background: url(../images/home_screen.png);
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .box_no_background{
@@ -14,7 +14,7 @@
     width: 900px;
     height: 563px;
     /*background: url(../images/home_screen.png);*/
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 .login-box {
     width: 100%;
@@ -82,11 +82,19 @@
     font-size: 16px !important;
 }
 
+#mainContainer{
+    margin: 0 auto;
+    position: relative;
+    width: 1150px;
+    height: 563px;
+    /*border: 1px solid black;*/
+}
+
 #gamecontainer {
     width: 900px;
     height: 563px;
     background: url(../images/home_screen.png);
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 
@@ -97,6 +105,8 @@
     height: 100%;
     display: none;
 }
+
+
 
 /* Game Starting Menu Screen */
 #gamestartscreen {
@@ -134,75 +144,34 @@
     background:url(../images/loader.gif) no-repeat center;
     font:12px Arial;
 }
-
-/* Mission Briefing Screen */
-#missionscreen {
-    background: url(../images/main_interface.png) no-repeat;
-}
-
-#missionscreen #entermission {
-    position:absolute;
-    top:0px;
-    left:6px;
-    width:246px;
-    height:68px;
-    border-width:0px;
-    background-image: url(../images/buttons.png);
-    background-position: 0px 0px;
-}
-
-#missionscreen #entermission:disabled, #missionscreen #entermission:active {
-    background-image: url(../images/buttons.png);
-    background-position: -251px 0px;
-}
-
-#missionscreen #exitmission {
-    position:absolute;
-    top:0px;
-    left:650px;
-    width:98px;
-    height:68px;
-    border-width:0px;    
-    background-image: url(../images/buttons.png);
-    background-position: 0px -76px;
-}
-
-#missionscreen #exitmission:disabled,#missionscreen #exitmission:active{    
-    background-image: url(../images/buttons.png);
-    background-position: -103px -76px;
-}
-
-#missionscreen #missonbriefing {
-    position:absolute;
-    padding:10px;
-    top:160px;
-    left:20px;
-    width:410px;
-    height:300px;
-    color:rgb(130,150,162);
-    font-size: 20px;
-    font-family: ‘Courier New’, Courier, monospace;
-}
-
 /* Game Interface Screen */
 #gameinterfacescreen {
     background: url(../images/main_interface.png) no-repeat;
 }
 
-#gameinterfacescreen #gamemessages{
+#massagewrapper{
+    background: url(../images/chat_bg.png) no-repeat;
     position:absolute;
-    padding-left:10px;
-    top:485px;
-    left:5px;
-    width:750px;
-    height:60px;
-    color:rgb(130,150,162);
+    left: 905px;
+    top:0px;
+    width:245px;
+    height:500px;
+}
+
+#massagewrapper #gamemessages{
+    position:absolute;
+    left: 50px;
+    top:100px;
+    width:200px;
+    height:350px;
+    color: rgb(6, 3, 3);
     overflow:hidden;
     font-size: 13px;
     font-family: 'Courier New', Courier, monospace;
+    /*border: 1px solid black;*/
 }
-#gameinterfacescreen #gamemessages span {
-    color:white;
+#massagewrapper #gamemessages span {
+    color: #ff2620;
 }
 
 #gameinterfacescreen #callerpicture {
@@ -214,12 +183,25 @@
     overflow:none;
 }
 
+#gameinterfacescreen #cash_hint {
+    width:90px;
+    height:40px;
+    position:absolute;
+    left:765px;
+    top:515px;
+    color:rgb(130,150,162);
+    overflow:hidden;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align:right;
+}
+
 #gameinterfacescreen #cash {
     width:90px;
     height:40px;
     position:absolute;
     left:760px;
-    top:380px;
+    top:540px;
     color:rgb(130,150,162);
     overflow:hidden;
     font-size: 13px;
@@ -331,57 +313,53 @@
     position:absolute;
     top:170px;
     left:140px;
-    width:296px;
-    height:178px;
+    width: 500px;
+    height: 250px;
     color:white;
     background:url(../images/messagebox.png) no-repeat center;
-    color:rgb(130,150,162);
+    color: rgb(162, 34, 20);
     overflow:hidden;
-    font-size: 13px;
+    font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
 }
 #messagebox span {
     position:absolute;
     top:30px;
     left:50px;
-    width:200px;
+    width:400px;
     height:100px;
 }
 
 #messagebox input[type="button"]{
-    background-image: url(../images/buttons.png);
+    background-image: url(../images/room_related.png);
     position:absolute;
     border-width:0px;
     padding:0px;
 }
 #messageboxok{
-    background-position: -2px -150px;
-    top:126px;
+    background-position: -675px -247px;
+    top:180px;
     left:11px;    
-    width:74px;
-    height:26px;
+    width:125px;
+    height:45px;
 }
-#messageboxok:active,#messageboxok:disabled{
-    background-position: -2px -186px;
-}
+
 
 #messageboxcancel{
-    background-position: -86px -150px;    
+    background-position: -640px -300px;
     left:197px;
     top:129px;    
-    width:73px;
-    height:24px;
-}
-#messageboxcancel:active,#messageboxcancel:disabled{
-    background-position: -86px -184px;
+    width:125px;
+    height:45px;
 }
 
+
 /* Multiplayer Lobby Screen */
-#multiplayerlobbyscreen {
-    background:url(../images/multiplayerlobbyscreen.png) no-repeat center;
+#roomscreen {
+    background:url(../images/roomscreen.png) no-repeat center;
 }
-#multiplayerlobbyscreen input[type="button"]{
-    background-image: url(../images/buttons.png);
+#roomscreen input[type="button"]{
+    background-image: url(../images/room_related.png);
     position:absolute;
     border-width:0px;
     padding:0px;
@@ -390,24 +368,24 @@
 
 /*截取join图标*/
 #multiplayerjoin{
-    background-position: -2px -212px;
+    background-position: -237px -112px;
     top:400px;
-    left:250px;
-    width:74px;
-    height:26px;
+    left:200px;
+    width:126px;
+    height:44px;
 }
 #multiplayerjoin:active,#multiplayerjoin:disabled{
-    background-position: -2px -247px;
+    background-position:-239px -173px;
 }
 #multiplayercancel{
-    background-position: -86px -150px;    
+    background-position: -240px -236px;
     left:545px;
     top:400px;    
-    width:73px;
-    height:24px;
+    width:126px;
+    height:44px;
 }
 #multiplayercancel:active,#multiplayercancel:disabled{
-    background-position: -86px -184px;
+    background-position: -239px -303px;
 }
 #multiplayergameslist {
     padding:20px;
@@ -435,10 +413,20 @@
     color:lightblue;
 }
 
+#massagewrapper #gameanalysis{
+    position:absolute;
+    left: 20px;
+    top:500px;
+    width:225px;
+    height:60px;
+    border: 1px solid black;
+}
+
+
 #chatmessage{
     position:absolute;
     top:545px;
-    width:730px;
+    width:760px;
     height: 17px;
     background:rgba(255,255,255,0.1);
     color:green;

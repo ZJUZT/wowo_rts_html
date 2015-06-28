@@ -240,6 +240,9 @@ var buildings = {
 		    } else if (this.life <= 0){
 		        this.lifeCode = "dead";
 		        game.remove(this);
+                game.destroyed_num[this.team]++;
+                if(this.team==multiplayer.color)
+                	multiplayer.updateDestroyed();
 		        return;                
 		    } else {
 		        this.lifeCode = "damaged";
@@ -322,7 +325,10 @@ var buildings = {
 					        this.animationIndex = 0;     
 					        if (this.lifeCode == "healthy"){
 					            // Harvesters mine 2 credits of cash per animation cycle
-					            game.cash[this.team] += 10;
+					            game.cash[this.team] += 5;
+                                game.money_collected[this.team] += 5;
+                                if(this.team == multiplayer.color)
+                                	multiplayer.updateMoneyCollect();
 					        }
 					    }
 					    break;					

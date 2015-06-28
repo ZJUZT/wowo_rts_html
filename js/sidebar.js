@@ -56,6 +56,8 @@ var sidebar = {
 	animate:function(){		
 		// Display the current cash balance value		
 		$('#cash').html(game.cash[game.team]);
+        $("#money_collected").html(game.money_collected[game.team]);
+        $("#destroyed_num").html(game.destroyed_num[game.team]);
 
 		//  Enable or disable buttons as appropriate
 		this.enableSidebarButtons();		

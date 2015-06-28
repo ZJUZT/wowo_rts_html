@@ -59,6 +59,9 @@ var aircraft = {
             } else if (this.life <= 0){
                 this.lifeCode = "dead";
                 game.remove(this);
+                game.destroyed_num[this.team]++;
+                if(this.team==multiplayer.color)
+                	multiplayer.updateDestroyed();
                 return;                
             } else {
                 this.lifeCode = "damaged";
